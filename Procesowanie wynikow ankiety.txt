@@ -1,0 +1,71 @@
+1. najpierw reczne zmiany:
+
+Beta sosniaka 6 zamiast 8 jesli popatrzec na inne rzeczy znajdujace sie na 8 poziomie
+(Zmieniane tylko dla poziomow 6-8)
++ zmiany zwiazane z zaokraglaniem w dol (np danie samych 8 jesli ocena byla 7,7[chodzi o zaokraglanie w dol pozniej])
+
++Zmiana nazw jesli za dlugie
+
+2. Zautomayzowac proces
+	* ZAOKRAGLANIE W DOL
+
+POZIOMY OD 1 do 5 
+
+
+"Wartosci w przyblizeniu"
+1 --- 13%
+2 --- 13%
+3 --- 15%
+4 --- 13%
+5 --- 43%
+
+Napisac skrypt ktory wyplaszczy dystrybujce danych
+(przerzuci dolna czesc z labelu 5 na 4 dolna z 4 na 3 .... dolna z 2 na 1)
+CEL:
+	Jak najwieksze wyrownanie ilosci rzeczy w danym labelu przy zachowaniu pierwotnego sensu
+
+1 --- 20%
+2 --- 20%
+3 --- 20%
+4 --- 20%
+5 --- 20%
+
+DOBIERANIE BUCKETOW ZEBY BYLY ROWNE (metodologia)
+
+array = [lista ze srednimi z kazdego odpalu]
+0     1.000
+1     1.000
+2     1.250
+3     1.250
+4     1.500
+ 
+55    5.750
+58    5.750
+59    5.750
+62    5.875
+64    5.875
+
+def flatten_distribution(array,label_num=5): #(bo od 6 do 8 to juz osobne)
+    '''
+    data
+    data_zaokr
+    
+    bucketuj to do rownych 
+    BIORE ILOSC DZIELE PRZEZ 5
+    '''
+    arr_len = len(array)
+    number_in_label = arr_len//5
+    reszta = arr_len%5
+    #print(number_in_label)
+    #print(arr_len)
+    #print(reszta)
+    labels = []
+    for i in range(1,label_num+1):
+        for j in range(number_in_label):
+            labels.append(i)
+    for k in range(reszta):
+        labels.append(i) # BO I ZOSTALO JAKO NAJWYZZY LABEL !!
+    return labels
+
+
+
