@@ -1,6 +1,6 @@
 1. najpierw reczne zmiany:
 
-Beta sosniaka 6 zamiast 8 jesli popatrzec na inne rzeczy znajdujace sie na 8 poziomie
+Beta xxx 6 zamiast 8 jesli popatrzec na inne rzeczy znajdujace sie na 8 poziomie
 (Zmieniane tylko dla poziomow 6-8)
 + zmiany zwiazane z zaokraglaniem w dol (np danie samych 8 jesli ocena byla 7,7[chodzi o zaokraglanie w dol pozniej])
 
